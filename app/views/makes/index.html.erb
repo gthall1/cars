@@ -1,0 +1,9 @@
+<h1>Welcome to the Used Car Sales Place Thing</h1>
+
+<ul>
+  <% @make.each do |make| %>
+    <li><%= link_to(make.name, make_path(make)) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add new Manufacturer', new_make_path %>
