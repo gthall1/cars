@@ -3,4 +3,8 @@ class CarsController < ApplicationController
     @car = Car.all
   end
 
+  def new
+
+  end
+
 end
