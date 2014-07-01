@@ -1,0 +1,9 @@
+<h1> All Cars </h1>
+
+<ul>
+  <% @car.each do |car|%>
+    <li><%= link_to(car.make.name, car_path(car)) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add new car', new_car_path %>
