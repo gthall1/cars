@@ -16,4 +16,14 @@ class MakesController < ApplicationController
     end
   end
 
+  private
+
+  def make_params
+    params.require(:make).permit(:name, :origin)
+  end
+
 end
+
+
+
+
