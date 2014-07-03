@@ -1,6 +1,15 @@
 <h1>Add a Manufacturer</h1>
 
 <%= simple_form_for @new_make, :html => { :multipart => true} do |f| %>
+  <% if @new_make.errors.any? %>
+    <h2>Errors:</h2>
+    <ul>
+      <% @new_make.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <%= f.input :name, label: 'Name' %>
   <%= f.input :origin, label: 'Country' %>
 

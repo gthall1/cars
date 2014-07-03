@@ -12,7 +12,7 @@ class MakesController < ApplicationController
     if @make.save
       redirect_to makes_path
     else
-      flash[:notice] ="Please fill in all fields completely"
+      flash.now[:notice] = "Please fill out this field."
     end
   end
 
