@@ -10,9 +10,9 @@
     </ul>
   <% end %>
 
-  <%= f.input :make_id, :collection => @makes,  label: 'Name' %>
+  <%= f.input :make_id, :collection => @makes,  label: 'Manufacturer' %>
   <%= f.input :color, label: 'Color' %>
-  <%= f.input :year, label: 'Year' %>
+  <%= f.input :year, label: 'Year', collection: 1920..2014 %>
   <%= f.input :mileage, label: 'Mileage' %>
   <%= f.input :description %>
 
