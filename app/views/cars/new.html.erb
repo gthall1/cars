@@ -1,8 +1,20 @@
 <h1>Add a New Car</h1>
 
 <%= simple_form_for @new_car, :html => { :multipart => true} do |f| %>
-  <%= f.input :name, label: 'Name' %>
-  <%= f.input :origin, label: 'Country' %>
+  <% if @new_car.errors.any? %>
+    <h2>Errors:</h2>
+    <ul>
+      <% @new_car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.input :make_id, :collection => @makes,  label: 'Name' %>
+  <%= f.input :color, label: 'Color' %>
+  <%= f.input :year, label: 'Year' %>
+  <%= f.input :mileage, label: 'Mileage' %>
+  <%= f.input :description %>
 
   <%= f.button :submit %>
 <% end %>

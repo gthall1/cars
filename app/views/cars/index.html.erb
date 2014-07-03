@@ -1,8 +1,8 @@
 <h1> All Cars </h1>
 
 <ul>
-  <% @car.each do |car|%>
-    <li><%= link_to(car.make.name, car_path(car)) %></li>
+  <% @cars.each do |car| %>
+    <li><%= link_to(car.make.name + " " + car.year, car_path(car)) %></li>
   <% end %>
 </ul>
 

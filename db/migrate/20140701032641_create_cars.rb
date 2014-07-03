@@ -3,8 +3,8 @@ class CreateCars < ActiveRecord::Migration
     create_table :cars do |t|
       t.integer :make_id, null: false
       t.string :color, null: false
-      t.integer :year, null: false
-      t.integer :mileage, null: false
+      t.string :year, null: false
+      t.string :mileage, null: false
       t.text :description
 
       t.timestamps
